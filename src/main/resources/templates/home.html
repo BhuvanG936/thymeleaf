@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+<!--    <script type="text/javascript" th:scr="@{js/main.js}"></script>-->
+
+    <script type="text/javascript" scr="/resources/static/js/main.js"></script>
+
+    <script>
+
+        function show(){
+
+               alert("Welcome from show");
+        }
+
+    </script>
+
+</head>
+<body>
+    <p>This is Home</p>
+<p>Welcome Thymeleaf Programming, <span th:text="${name}"></span></p>
+
+<button onclick="show()"> Click here</button>
+
+    <footer id="parent-footer" th:replace="fragment/demoHtml :: header">
+        <h1>From Home</h1>
+    </footer>
+
+<!--    INCLUDE
+   <footer id="parent-footer">
+<h1 id="from-fragment1"> From Fragments</h1>
+
+    INSERT
+    <footer id="parent-footer"><nav id="from-fragment">
+<h1 id="from-fragment1"> From Fragments</h1>
+
+   REPLACE
+  <nav id="from-fragment">
+<h1 id="from-fragment1"> From Fragments</h1>
+
+-->
+
+</body>
+</html>
